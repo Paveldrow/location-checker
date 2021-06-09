@@ -119,7 +119,6 @@ function addMarker(map, latlong, icon) {
     position: latlong,
     map: map,
     clickable: true,
-    animation: google.maps.Animation.DROP,
     icon: markerImage,
   }
 
