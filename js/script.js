@@ -19,7 +19,7 @@ function clearWatchLocation() {
 var options = {
   enableHighAccuracy: true,
   timeout: 100,
-  maximumAge: 0,
+  maximumAge: 5000,
 };
 
 const displayError = function (error) {
