@@ -107,16 +107,20 @@ function initMap(coords) {
 
   const title = 'prise';
   const content = 'this place';
-  addMarker(map, googleLatLong)
+  addMarker(map, googleLatLong, markerImage)
 };
 
 
-function addMarker(map, latlong) {
+function addMarker(map, latlong, icon) {
+
+  const markerImage = './marker.png';
 
   const markerOptions = {
     position: latlong,
     map: map,
     clickable: true,
+    animation: google.maps.Animation.DROP,
+    icon: markerImage,
   }
 
   const marker = new google.maps.Marker(markerOptions);
