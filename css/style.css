@@ -3,7 +3,7 @@
 }
 
 .map-container {
-  width: auto;
+  width: 100%;
   height: 500px;
   background-color: #c3c3c3;
 }
