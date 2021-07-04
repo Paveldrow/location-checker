@@ -65,7 +65,7 @@ function degreesToRadians(degrees) {
   return radians;
 }
 
-// let prevCoords = null;
+let prevCoords = null;
 
 function displayLocation(position) {
   const latitude = position.coords.latitude;
@@ -75,14 +75,14 @@ function displayLocation(position) {
 
   if (map == null) {
     initMap(position.coords);
-    // prevCoords = position.coords;
+    prevCoords = position.coords;
   } else {
     scrollMapsToPosition(position.coords);
-    // const meters = computeDistance(position.coords, prevCoords) * 1000;
-    // if (meters > 5) {
-    //   scrollMapsToPosition(position.coords);
-    //   prevCoords = position.coords;
-    // }
+    const meters = computeDistance(position.coords, prevCoords) * 1000;
+    if (meters > 5) {
+      scrollMapsToPosition(position.coords);
+      prevCoords = position.coords;
+    }
   };
 };
 
